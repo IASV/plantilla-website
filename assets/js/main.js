@@ -1,10 +1,11 @@
-button_menu = document.getElementById('button_menu');
-button_account = document.getElementById('button_account');
-button_data = document.getElementById('button_data');
-button_list = document.getElementById('button_list');
-button_shopping = document.getElementById('button_shopping');
+const button_menu = document.getElementById('button_menu');
+const button_account = document.getElementById('button_account');
+const button_data = document.getElementById('button_data');
+const button_list = document.getElementById('button_list');
+const button_shopping = document.getElementById('button_shopping');
+const button_settings = document.getElementById('button_settings');
 
-menu = document.getElementById('menu');
+const menu = document.getElementById('menu');
 
 activitys = document.getElementsByClassName('activity');
 
@@ -13,8 +14,10 @@ activity_account = document.getElementById('activity_account');
 activity_data = document.getElementById('activity_data');
 activity_list = document.getElementById('activity_list');
 activity_shopping = document.getElementById('activity_shopping');
+activity_settings = document.getElementById('activity_settings');
 
-box_shopping = document.getElementById('box_shopping');
+let box_shopping = document.getElementById('box_shopping');
+let container_settings = document.getElementById('container_settings');
 
 button_menu.addEventListener('click', (e) => {
     active_menu = menu.classList.toggle('activate_menu');
@@ -39,7 +42,12 @@ button_list.addEventListener('click', (e) => {
 
 button_shopping.addEventListener('click', (e) => {
     this.disable_activitys();
-    activity_shopping.style.display = 'flex';
+    activity_shopping.style.display = 'flex';       
+});
+
+button_settings.addEventListener('click',(e) => {
+    this.disable_activitys();
+    activity_settings.style.display = 'flex';
 });
 
 function disable_activitys () {
@@ -76,9 +84,11 @@ function tamVentana() {
 window.onload = () => {
     this.disable_activitys();
     activity_account.style.display = 'flex';;
-    box_shopping.style.height = `${this.tamVentana()[1] - (this.tamVentana()[1]*0.3)}px`;
+    box_shopping.style.height = `${this.tamVentana()[1] - (this.tamVentana()[1]*0.3)}px`;    
+    container_settings.style.height = `${this.tamVentana()[1] - (this.tamVentana()[1]*0.25)}px`
 }
 
 window.onresize = () => {
     box_shopping.style.height = `${this.tamVentana()[1] - (this.tamVentana()[1]*0.3)}px`;
+    container_settings.style.height = `${this.tamVentana()[1] - (this.tamVentana()[1]*0.25)}px`
 }

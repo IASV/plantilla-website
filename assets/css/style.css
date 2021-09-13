@@ -187,7 +187,10 @@ main{
 
 .account .profile .date {
     padding: 20px;
-    width: 49%;
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(0, 72, 114);
     border-radius: 5px;
     transition-duration: 0.5s;
@@ -197,23 +200,17 @@ main{
     margin: 5px 0px;
     font-family:sans-serif;
     font-size: 0.7em;
+    width: 33.33%;
 }
 
 .account .profile .date h3 {
+    width: 100%;
     margin-bottom: 10px;
     color: rgb(195, 238, 255);
 }
 
 .account .profile .date:hover {
     box-shadow: 0px 0px 10px 1px rgba(0, 162, 255, 0.246);
-}
-
-.account .profile .data_location {
-    margin-right: 1%;
-}
-
-.account .profile .data_person {
-    margin-left: 1%;
 }
 
 /******** Activity data ********/
@@ -374,6 +371,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
+    width: auto;
     height: auto;
 }
 
@@ -383,7 +381,7 @@ main{
 }
 
 .shopping .container_shopping .box_shopping .box_item {
-    max-width: 10%;
+    max-width: 20%;
     min-width: 200px;
     margin: 1%;
     padding: 10px;
@@ -416,8 +414,158 @@ main{
 /******** Activity settings ********/
 
 .settings {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
+
+.settings .container_settings {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;    
+    overflow-y: auto;
+    width: auto;
+    height: auto;
+}
+
+.settings .container_settings .data_settings {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.settings .container_settings .data_settings .data {
+    width: 48%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.settings .container_settings .data_settings .data h3 {
+    margin: 5px 0px 10px 5px;
+}
+
+.settings .container_settings .data_settings .data.user{
+    border-radius: 10px;
+    background-color: rgb(0, 38, 61);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.281);
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.settings .container_settings .data_settings .data.user .image_user {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    max-width: 80%;
+    width: 100%;
+    min-width: 200px;
+}
+
+.settings .container_settings .data_settings .data.user img {
+    max-width: 200px;
+    width: 40%;
+}
+
+.settings .container_settings .data_settings .data.user .change_img {
+    width: 60%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.settings .container_settings .data_settings .data.user .change_img span {
+    margin: 5px;
+    width: 100%;
+}
+
+.settings .container_settings  input {
+    margin:10px 5px;
+    width: 60px;
+    padding: 5px;
+    outline: none;
+    border: 2px solid rgb(0, 74, 134);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 74, 134);
+    transition-duration: 0.5s;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.281);
+}
+
+.settings .container_settings input:hover {
+    background-color: rgb(0, 110, 173);
+    cursor: pointer;
+}
+
+.settings .container_settings input:active {
+    background-color: rgb(0, 36, 66);
+}
+
+.settings .container_settings .data_settings .input_data {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.settings .container_settings .data_settings .input_data label {
+    width: 25%;
+    margin: 5px 0px;
+    padding-left: 5px;
+}
+
+.settings .container_settings .data_settings .input_data input, textarea {
+    width: 75%;
+    max-width: 50%;
+    margin: 5px 0px;
+    padding: 4px;
+    outline: none;
+    border: 2px solid rgb(0, 19, 36);
+    background-color: rgb(0, 54, 98);
+    border-radius: 5px;
+    color: rgb(194, 227, 255);
+    transition-duration: 0.2s;
+}
+
+.settings .container_settings .data_settings .input_data input:hover, textarea:hover {
+    border-color: rgb(0, 79, 144);
+}
+
+.settings .container_settings .data_settings .data.location {
+    padding: 20px 10px;
+}
+
+.settings .container_settings .data_settings .data.location .label_description {
+    width: 100%;
+}
+
+.settings .container_settings .data_settings .data.location textarea {
+    margin-left: 25%;
+}
+
+.settings .container_settings .data_settings .other_options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.settings .container_settings .data_settings .other_options .light_mode {
+    width: 60%;
+    padding-left: 20px;
+}
+.settings .container_settings .data_settings .other_options .button_save {
+    width: 40%;
+    padding-right: 10px;
+}
+
+.settings .container_settings .button_save #save_button {
+    width: 80px;
+    float: right;
+}
+
 
 /******** Animations ********/
 
