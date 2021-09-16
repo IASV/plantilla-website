@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(21, 40, 65);
+body{    
     height: 100%;
-    overflow: hidden;
+    overflow: hidden;    
+}
+
+body label {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .head_menu{
@@ -37,7 +40,7 @@ main{
     top: 0px;
     bottom: 0px;
     z-index: -1;
-    overflow: hidden;
+    overflow: hidden;    
 }
 
 .menu .items {
@@ -56,7 +59,7 @@ main{
 }
 
 .menu .items .item a:hover {
-    background-color: rgb(14, 24, 51);
+    background-color: rgba(14, 24, 51, 0.719);
 }
 
 .menu .items .item a {
@@ -77,9 +80,10 @@ main{
     position: absolute;
     left: 55px;
     width: calc(100% - 70px);
-    animation: opacitySpan 3s;
+    animation: opacitySpan 2s;
     height: auto;
-    padding: 10.5px;
+    padding: 10px;
+    font-size: 1em;
 }
 
 .menu .items .item a i {
@@ -123,11 +127,18 @@ main{
     margin-left: 70px;
 }
 
+.active_button a {
+    background-color: rgb(14, 24, 51);
+}
+
 /******** Activity ********/
 .activity {
     font-size: 18px;
     width: 100%;
-    animation:  slideChangeActivity 0.8s;
+    animation:  slideChangeActivity 0.5s;
+    overflow-y:scroll;
+    height: auto;
+    padding-bottom: 50px;
 }
 
 .activity h1 {
@@ -148,6 +159,205 @@ main{
     font-size: 0.8em;
 }
 
+.activity  input[type="button"] {
+    margin:10px 5px;
+    width: 60px;
+    padding: 5px;
+    outline: none;
+    border: 2px solid rgb(0, 74, 134);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 74, 134);
+    transition-duration: 0.5s;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.281);
+}
+
+.activity input[type="button"]:hover {
+    background-color: rgb(0, 110, 173);
+    cursor: pointer;
+}
+
+.activity input[type="button"]:active {
+    background-color: rgb(0, 36, 66);
+}
+
+/******** Light style mode ********/
+
+.light_style_header {    
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 1px rgba(44, 44, 44, 0.26);
+}
+
+.light_style_header a {
+    color: black;
+}
+
+.light_style_menu {
+    background-color: white;
+    border-right: 2px solid rgb(0, 74, 134);
+}
+
+.light_style_menu .items .item a {
+    color: rgb(32, 61, 100);
+}
+
+.light_style_menu .items .item a:hover {
+    box-shadow: 1px 1px 5px 1px gray;
+    background-color: rgb(255, 255, 255);
+}
+
+.light_style_menu .items .item a:active {
+    background-color: rgb(224, 224, 224);
+}
+
+.light_style_menu .items .item a i {
+    color: rgb(32, 61, 100);
+}
+
+.active_button_light a {
+    background-color: rgba(224, 224, 224, 0.507);
+    box-shadow: 1px 1px 5px 1px rgba(65, 65, 65, 0.5);
+}
+
+.light_style_button_up {
+    color: white;
+    border: 4px solid rgb(0, 74, 134);    
+    background-color: rgb(0, 74, 134);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.424);
+}
+
+.light_style_button_up:hover {
+    background-color: rgb(0, 110, 173);
+    cursor: pointer;
+}
+
+.light_style_button_up:active {
+    background-color: rgb(0, 36, 66);
+}
+
+.light_style_body_color {
+    background-color: rgb(255, 255, 255);
+}
+
+.light_style_body_color h1 {
+    background-color: white;
+    color: rgb(0, 36, 66);
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(0, 74, 134);
+}
+
+.light_style_body_color h2,.light_style_body_color h3,.light_style_body_color h4,.light_style_body_color h5,.light_style_body_color span,.light_style_body_color label {
+    color: black;
+}
+
+    /******** account *******/
+
+.light_style_body_color .account .profile .date {
+    background-color: rgb(217, 238, 255);
+}
+
+.light_style_body_color .account .profile .date:hover {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.322);
+}
+
+.light_style_body_color .account .profile .date h3 {
+    color: rgb(21, 40, 65);
+}
+
+    /******** data *******/
+
+.light_style_body_color .data .data_info .data_table {
+    background-color: rgb(217, 238, 255);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.144);
+}
+
+.light_style_body_color .data .data_info .data_table .table h5 {
+    color: rgb(104, 104, 104);
+}
+
+    /******** list *******/
+
+.light_style_body_color .list .container_list .item_list:hover {
+    box-shadow: 1px 1px 5px 1px gray;
+    background-color: rgb(255, 255, 255);
+}
+
+    /******** shopping *******/
+
+.light_style_body_color .shopping .container_shopping .bar_search .search {
+    background-color: white;
+}
+
+.light_style_body_color .shopping .container_shopping .bar_search .search .box_search {
+    color: white;
+    border: 2px solid rgb(28, 107, 182);
+}
+
+.light_style_body_color .shopping .container_shopping .bar_search .search a {
+    color: rgb(28, 107, 182);
+}
+
+.light_style_body_color .shopping .container_shopping .bar_search .search a:hover {
+    color: rgb(20, 75, 128);
+}
+
+.light_style_body_color .shopping .container_shopping .box_shopping .box_item {
+    background-color: white;
+}
+
+    /******** settings *******/
+
+.light_style_body_color .settings .container_settings .data_settings .data.user {
+    background-color: white;
+}
+
+.light_style_body_color .settings .container_settings .data_settings .data .input_data input, .light_style_body_color .settings .container_settings .data_settings .data .input_data textarea{
+    background-color: white;
+    color: black;
+    border-color: rgb(20, 75, 128);
+}
+
+.light_style_body_color .settings .container_settings .data_settings .data .input_data input:hover, .light_style_body_color .settings .container_settings .data_settings .data .input_data textarea:hover {
+    background-color: rgba(28, 108, 182, 0.274);
+}
+
+/******** Body color *******/
+
+.body {
+    background-color: rgb(21, 40, 65);
+}
+
+/******** Button up ********/
+
+.button_up {
+    color: rgb(0, 74, 134);
+    border: 4px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.363);
+}
+
+.button_up:hover {
+    background-color: rgb(163, 191, 228);;
+    border-color: rgb(228, 228, 228);
+    cursor: pointer;
+}
+
+.button_up:active {
+    background-color: rgb(194, 194, 194);    
+}
+
+#button_up {
+    position: absolute;
+    bottom: 15px;
+    left: 12px;
+    margin: 0px;
+    text-decoration: none;
+    font-size: 1.6em;
+    border-radius: 50px;
+    padding: 2px 6px;
+    transition-duration: 0.5s;
+}
+
 /******** Activity account ********/
 
 .account {
@@ -165,14 +375,15 @@ main{
     padding: 1px;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
 .account .profile .data_profile img {
     width: 40%;
-    min-width: 70px;
+    height: fit-content;
     max-width: 150px;
+    min-width: 50px;
 }
 
 .account .profile .data_profile .info {
@@ -191,16 +402,17 @@ main{
     margin: 1%;
     display: flex;
     flex-wrap: wrap;
+    max-width: 500px;
     background-color: rgb(0, 72, 114);
     border-radius: 5px;
     transition-duration: 0.5s;
 }
 
 .account .profile .date h4 {
-    margin: 5px 0px;
+    margin: 10px 4%;
     font-family:sans-serif;
     font-size: 0.7em;
-    width: 33.33%;
+    width: 100%;
 }
 
 .account .profile .date h3 {
@@ -230,18 +442,36 @@ main{
     text-align: center;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(0, 38, 61);
     color: rgb(255, 255, 255);
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
+    padding: 10px 20px;
     box-shadow: 0px 0px 5px 5px rgba(0, 72, 116, 0.096);
+    width: 100%;
+    justify-content: center;
 }
 
-.data .data_info .data_table tr td {
-    width: 500px;
+.data .data_info .data_table .table {
+    width: 20%;
+    min-width: 150px;
+    margin: 10px 0px;
 }
 
+.data .data_info .data_table .table h3 {
+    margin: 10px 0px;
+    border-bottom: 5px solid rgb(0, 140, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.data .data_info .data_table .table h5 {
+    margin: 5px 0px;
+    color: rgb(153, 153, 153);
+    text-align: center;
+}
 /******** Activity list ********/
 
 .list {
@@ -251,6 +481,7 @@ main{
 
 .list .container_list {    
     width: 100%;
+    padding: 0px 5px;
 }
 
 .list .container_list .item_list {
@@ -266,27 +497,12 @@ main{
     background-color: rgb(18, 70, 119);
 }
 
-.list .container_list .item_list input[type=button] {
-    width: 20%;
+.list .container_list .item_list input[type="button"] {
     max-width: 80px;
-    border: none;
-    background-color: rgb(185, 229, 255);
-    border-radius: 50px;
-    margin: 10px 5px;
-    transition-duration: 0.5s;
+    margin: 25px 0px;
 }
 
-.list .container_list .item_list input[type=button]:hover {
-    background-color: rgb(0, 34, 61);
-    color: white;
-    cursor: pointer;
-}
-
-.list .container_list .item_list input[type=button]:active {
-    background-color: rgb(0, 103, 187);
-} 
-
-.list .container_list .item_list input[type=radio] {
+.list .container_list .item_list input[type="radio"] {
     padding: 10px;
     width: 10%;
     max-width: 50px;
@@ -317,9 +533,11 @@ main{
     padding-bottom: 10px;
 }
 
-.shopping .container_shopping .bar_search .search {
+.shopping .container_shopping .bar_search .search {    
+    top: 100px;
+    position: sticky;
     width: 30%;
-    min-width: 250px;
+    min-width: 200px;
     padding: 10px;
     float: right;
     display: flex;
@@ -371,8 +589,9 @@ main{
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    width: auto;
+    width: 100%;
     height: auto;
+    justify-content: center;    
 }
 
 /*** Hide scroll ***/
@@ -424,10 +643,8 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;    
-    overflow-y: auto;
-    width: auto;
-    height: auto;
+    height: 100%;  
+   
 }
 
 .settings .container_settings .data_settings {
@@ -440,12 +657,15 @@ main{
     width: 48%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    min-width: 300px;
+    flex-direction: column;  
+    overflow:hidden;
+    transition-duration: 0.5s;
 }
 
 .settings .container_settings .data_settings .data h3 {
     margin: 5px 0px 10px 5px;
+    text-align: center;
+    font-size: 1.6em;
 }
 
 .settings .container_settings .data_settings .data.user{
@@ -469,6 +689,7 @@ main{
 .settings .container_settings .data_settings .data.user img {
     max-width: 200px;
     width: 40%;
+    height: fit-content;
 }
 
 .settings .container_settings .data_settings .data.user .change_img {
@@ -484,42 +705,23 @@ main{
     width: 100%;
 }
 
-.settings .container_settings  input {
-    margin:10px 5px;
-    width: 60px;
-    padding: 5px;
-    outline: none;
-    border: 2px solid rgb(0, 74, 134);
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(0, 74, 134);
-    transition-duration: 0.5s;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.281);
-}
-
-.settings .container_settings input:hover {
-    background-color: rgb(0, 110, 173);
-    cursor: pointer;
-}
-
-.settings .container_settings input:active {
-    background-color: rgb(0, 36, 66);
-}
-
 .settings .container_settings .data_settings .input_data {
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
 }
 
 .settings .container_settings .data_settings .input_data label {
-    width: 25%;
-    margin: 5px 0px;
+    width: 40%;
+    margin: 10px 0px;
     padding-left: 5px;
+    font-size: 0.8em;
 }
 
 .settings .container_settings .data_settings .input_data input, textarea {
-    width: 75%;
-    max-width: 50%;
+    width: 60%;
+    max-width: 250px;
+    min-width: 100px;
     margin: 5px 0px;
     padding: 4px;
     outline: none;
@@ -538,26 +740,32 @@ main{
     padding: 20px 10px;
 }
 
+.settings .container_settings .data_settings .data.location h3 {
+    margin-bottom: 20px;
+}
+
 .settings .container_settings .data_settings .data.location .label_description {
     width: 100%;
 }
 
 .settings .container_settings .data_settings .data.location textarea {
-    margin-left: 25%;
+    margin-left: 40%;
 }
 
 .settings .container_settings .data_settings .other_options {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .settings .container_settings .data_settings .other_options .light_mode {
-    width: 60%;
+    width: 100%;
     padding-left: 20px;
+    
 }
 .settings .container_settings .data_settings .other_options .button_save {
-    width: 40%;
+    width: 100%;
     padding-right: 10px;
 }
 
@@ -566,6 +774,56 @@ main{
     float: right;
 }
 
+/******** Respoinsive ********/
+    
+@media only screen and (max-width: 390px ) {
+    .settings .container_settings .data_settings .data .input_data {
+        width: 100%;
+    }
+
+    .settings .container_settings .data_settings .data .input_data label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .settings .container_settings .data_settings .data .input_data input,  .settings .container_settings .data_settings .data .input_data textarea,  .settings .container_settings .data_settings .data .input_data input {
+        width: 100%;
+        margin: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 500px ) {
+
+/******** List ********/
+
+    .list .container_list .item_list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .list .container_list .item_list label{        
+        width: 90%;
+    }
+
+    .list .container_list .item_list input[type="button"] {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 620px ) {
+
+    /******** settings ********/
+
+    .settings .container_settings .data_settings .data {
+        width: 100%;
+    }
+
+    .settings .container_settings .data_settings .other_options {
+        margin-bottom: 50px;
+    }
+}
 
 /******** Animations ********/
 

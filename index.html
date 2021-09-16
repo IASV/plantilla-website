@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Market Menu</title>
 </head>
-<body>
+<body class="body" id="body">
     <head>
-        <div class="head_menu">
+        <div class="head_menu" id="head_menu">
             <a href="#">Market Menu</a>
         </div>
     </head>
@@ -60,6 +60,12 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Button up -->
+            <a href="#" class="button_up" id="button_up">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+
         </div>
         <div class="activity_menu" id="activity_menu">
 
@@ -99,36 +105,48 @@
                 <h1>DATA</h1>
 
                 <div class="data_info">
-                    <table class="data_table">
-                        <tr>
-                            <td><strong>Bitcoin </strong></td>
-                            <td><strong>Ethereum </strong></td>
-                            <td><strong>SLP </strong></td>
-                            <td><strong>PVU </strong></td>
-                            <td><strong>CYT </strong></td>                            
-                        </tr>                                              
-                        <tr>                                                  
-                            <td>0.1</td>
-                            <td>0.4</td>
-                            <td>0.545</td>
-                            <td>0.22</td>
-                            <td>0.33</td>
-                        </tr>                         
-                        <tr>
-                            <td>0.22</td>
-                            <td>0.33</td>
-                            <td>0.54</td>
-                            <td>0.54</td>
-                            <td>0.79</td>
-                        </tr>
-                        <tr>
-                            <td>0.11</td>
-                            <td>0.32</td>
-                            <td>0.98</td>
-                            <td>0.47</td>
-                            <td>0.36</td>
-                        </tr>
-                    </table>                    
+                    <div class="data_table">
+                        <div class="table">
+                            <h3>BTC</h3>
+                            <h5>1.5</h5>
+                            <h5>1.5</h5>
+                            <h5>1.2</h5>
+                            <h5>1.4</h5>
+                            <h5>1.25</h5>
+                        </div>
+                        <div class="table">
+                            <h3>CYT</h3>
+                            <h5>0.32</h5>
+                            <h5>0.20</h5>
+                            <h5>0.34</h5>
+                            <h5>0.12</h5>
+                            <h5>0.10</h5>
+                        </div>
+                        <div class="table">
+                            <h3>PVU</h3>
+                            <h5>25.3</h5>
+                            <h5>20.2</h5>
+                            <h5>14.3</h5>
+                            <h5>10.19</h5>
+                            <h5>11.21</h5>
+                        </div>
+                        <div class="table">
+                            <h3>AXS</h3>
+                            <h5>32.1</h5>
+                            <h5>33.46</h5>
+                            <h5>24.22</h5>
+                            <h5>13.44</h5>
+                            <h5>10.79</h5>
+                        </div>
+                        <div class="table">
+                            <h3>BNB</h3>
+                            <h5>135.41</h5>
+                            <h5>100.32</h5>
+                            <h5>201.37</h5>
+                            <h5>287.49</h5>
+                            <h5>321.89</h5>
+                        </div>
+                    </div>                  
                 </div>
 
             </div>
@@ -324,7 +342,7 @@
                         <div class="other_options">
                             <div class="light_mode">
                                 <label for="">Light mode</label>
-                                <input type="button" value="active">                                
+                                <input id="button_light" type="button" value="active">                                
                             </div>
                             <div class="button_save">
                                 <input id="save_button" type="button" value="Save">                    
