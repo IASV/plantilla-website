@@ -6,6 +6,7 @@ const button_shopping = document.getElementById('button_shopping');
 const button_settings = document.getElementById('button_settings');
 const button_up = document.getElementById('button_up');
 const button_light = document.getElementById('button_light');
+const button_hide_title = document.getElementById('button_hide_title');
 
 let button_current = button_account;
 
@@ -85,6 +86,10 @@ button_light.addEventListener('click',(e) => {
         body_color.classList.replace('light_style_body_color', 'body');
         button_light_active = false;
     }
+});
+
+button_hide_title.addEventListener('click',(e) => {
+    body_color.classList.toggle('hide_title');
 });
 
 function disable_activitys () {
