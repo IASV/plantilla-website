@@ -76,7 +76,9 @@
                 <div class="profile">                   
                     
                     <div class="data_profile">
-                        <img src="assets/img/userPhoto.png" alt="no image" width="">
+                        <div class="img">
+                            <img id="img2" src="assets/img/userPhoto.png" alt="no image" width="">
+                        </div>                        
                         <div class="info">
                             <h3>User name</h3>
                             <h5>id#number</h5>
@@ -301,10 +303,11 @@
                         <div class="data user">
                             <h3>Data user</h3>
                             <div class="image_user">
-                                <img src="assets/img/userPhoto.png" alt="">
+                                <div class="img">
+                                    <img id="img" src="assets/img/userPhoto.png" alt="">
+                                </div>                                
                                 <div class="change_img">
-                                    <span id="root_img">ruta img...</span>
-                                    <input type="button" value="Change">
+                                    <input type="file" onchange="previewFile()" name="input" id="input_file">
                                 </div>
                             </div>
                             <div class="input_data">

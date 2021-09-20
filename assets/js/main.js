@@ -7,12 +7,15 @@ const button_settings = document.getElementById('button_settings');
 const button_up = document.getElementById('button_up');
 const button_light = document.getElementById('button_light');
 const button_hide_title = document.getElementById('button_hide_title');
+const button_input = document.getElementById('input_file');
 
 let button_current = button_account;
 
 const menu = document.getElementById('menu');
 
 const head_menu = document.getElementById('head_menu');
+
+const body_color = document.getElementById('body');
 
 activitys = document.getElementsByClassName('activity');
 
@@ -26,8 +29,6 @@ activity_settings = document.getElementById('activity_settings');
 let activity_current = activity_account;
 
 let button_light_active = false;
-
-const body_color = document.getElementById('body');
 
 button_menu.addEventListener('click', (e) => {
     active_menu = menu.classList.toggle('activate_menu');
@@ -91,6 +92,25 @@ button_light.addEventListener('click',(e) => {
 button_hide_title.addEventListener('click',(e) => {
     body_color.classList.toggle('hide_title');
 });
+
+function previewFile() {
+    let preview = document.querySelector('#img');
+    let preview2 = document.querySelector('#img2');
+    let file    = document.querySelector('#input_file').files[0];
+    let reader  = new FileReader();
+
+    reader.onloadend = function () {
+      preview.src = reader.result;
+      preview2.src = reader.result;
+    }
+  
+    if (file) {
+      reader.readAsDataURL(file);      
+    } else {
+      preview.src = "assets/img/userPhoto.png";
+      preview2.src = "assets/img/userPhoto.png";
+    }
+  }
 
 function disable_activitys () {
     for (let activity = 0; activity < activitys.length; activity++) {

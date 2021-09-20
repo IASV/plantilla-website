@@ -385,11 +385,13 @@ main{
     margin-bottom: 40px;
 }
 
-.account .profile .data_profile img {
-    width: 40%;
-    height: 100%;
-    max-width: 150px;
-    min-width: 50px;
+main .activity_menu .img img {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    border-radius: 50%;
 }
 
 .account .profile .data_profile .info {
@@ -687,27 +689,16 @@ main{
     display: flex;
     flex-wrap: wrap;
     margin: 10px 0px;
-    max-width: 80%;
     width: 100%;
     min-width: 200px;
-}
-
-.settings .container_settings .data_settings .data.user img {
-    max-width: 200px;
-    width: 40%;    
+    justify-content: center;
 }
 
 .settings .container_settings .data_settings .data.user .change_img {
-    width: 60%;
-    min-width: 100px;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-}
-
-.settings .container_settings .data_settings .data.user .change_img span {
-    margin: 5px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
 }
 
 .settings .container_settings .data_settings .input_data {
@@ -809,33 +800,11 @@ main{
 
 @media only screen and (max-width: 500px ) {
 
+/******** menu ********/
+
     .menu .items .item a span {
         left: 50px;
         padding-left: 0px;
-    }
-
-/******** account ********/
-
-    .account .profile .data_profile .info {
-        width: 50%;
-        padding-top: 15%;
-    }
-
-    .account .profile .data_profile img {        
-        width: 50%;
-        padding: 15% 0%;
-    }
-
-/******** settings ********/
-
-    .settings .container_settings .data.user .image_user .change_img {
-        width: 50%;
-        padding-top: 15%;
-    }
-
-    .settings .container_settings .data.user .image_user img {        
-        width: 50%;
-        padding: 15% 0%;
     }
 
 /******** List ********/
@@ -866,6 +835,17 @@ main{
     .settings .container_settings .data_settings .other_options {
         margin-bottom: 50px;
     }
+
+    /******** account ********/
+
+    .account .profile .data_profile .img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+
 }
 
 /******** Animations ********/
