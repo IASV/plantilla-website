@@ -695,10 +695,12 @@ main .activity_menu .img img {
 }
 
 .settings .container_settings .data_settings .data.user .change_img {
+    width: auto;
+    padding: 5%;
+}
+
+.settings .container_settings .data_settings .data.user .change_img input[type="file"] {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 2%;
 }
 
 .settings .container_settings .data_settings .input_data {
@@ -844,7 +846,6 @@ main .activity_menu .img img {
         justify-content: center;
         margin-bottom: 30px;
     }
-
 
 }
 
